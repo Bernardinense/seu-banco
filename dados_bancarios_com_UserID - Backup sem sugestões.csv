@@ -1,0 +1,6 @@
+UserID,name,account_id,account_number,agency,balance,account_limit,card_id,card_number,card_limit
+1,Devweekerson,1,01.097954-4,2030,624.12,1000,1,xxxx xxxx xxxx 1111,2000
+2,Peterson,2,30.405088-4,2020,500.0,5000,2,xxxx xxxx xxxx 7858,10000
+3,Mariana Lopes,3,45.998741-3,2045,300.75,1500,3,xxxx xxxx xxxx 2222,2500
+4,Carlos Eduardo,4,78.234561-9,2001,1820.3,3000,4,xxxx xxxx xxxx 3333,5000
+5,Ana Beatriz,5,12.675849-6,2055,945.5,3500,5,xxxx xxxx xxxx 4444,6000

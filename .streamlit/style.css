@@ -1,0 +1,64 @@
+.stApp {
+    background-image: url("data:image/jpeg;base64,{{BASE64_IMAGE}}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ESTE É O BLOCO DO OVERLAY QUE PRECISAMOS AJUSTAR */
+.stApp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255); /* Ajuste este 0.5 para a opacidade da MÁSCARA */
+    z-index: -1; /* <--- MUITO IMPORTANTE: Garante que o overlay fique ATRÁS do conteúdo do Streamlit */
+}
+
+/* --- Adições para garantir que o conteúdo não tenha fundo opaco e seja legível --- */
+
+/* Garante que o container principal da aplicação não tenha fundo opaco próprio */
+[data-testid="stAppViewContainer"] {
+    background-color: transparent !important;
+}
+
+/* Garante que o conteúdo .stApp não tenha fundo opaco próprio */
+.stApp {
+    background-color: transparent !important;
+}
+
+/* Torna a barra lateral e os blocos de conteúdo internos semi-transparentes brancos */
+/* Isso ajuda na legibilidade do texto que está DENTRO desses blocos */
+[data-testid="stSidebar"] {
+    background-color: rgba(255, 255, 255, 0.8) !important; /* Branco com 80% de opacidade */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.stBlock, .stContainer, .stColumns {
+    background-color: rgba(255, 255, 255, 0.7) !important; /* Branco com 70% de opacidade para os blocos de conteúdo */
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Remover o fundo do cabeçalho padrão do Streamlit (onde fica o botão "Deploy") */
+header {
+    background-color: transparent !important;
+}
+
+/* Opcional: Para o texto do menu também */
+.st-emotion-cache-1cypn31 { /* Este é um seletor Streamlit gerado para o menu superior. Pode mudar com versões. */
+    background-color: transparent !important;
+}
+
+.container-destaque {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
