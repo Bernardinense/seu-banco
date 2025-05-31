@@ -169,7 +169,7 @@ with st.sidebar:
     st.markdown("---")
     st.info("*Implementação futura: enviar as sugestões por e-mail automaticamente para cada cliente.*", icon="📩")
 
-    if st.button("📤 Disparar Sugestões", use_container_width=True, help="Envia de todas as dicas por e-mail para os clientes."):
+    if st.button("📤 Disparar Sugestões", use_container_width=True, help="Envio de todas as dicas por e-mail para os clientes."):
         st.success("Disparo concluído! As sugestões foram enviadas por e-mail. (Futura Implementação)", icon="✅")
 
 
